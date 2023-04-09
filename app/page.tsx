@@ -16,43 +16,71 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        {/* NAVBAR */}
         {/* HEADER */}
-        <div className="h-96 overflow-hidden">
-          <div
-            className="bg-center bg-gradient-to-r from-[#0f1f47] to-[#5f6984] h-full flex justify-center items-center">
-            <h1 className="text-7xl text-white capitalize text-shadow text-center">Milestones Grill (Toronto)</h1>
+        <div className="bg-gradient-to-r to-[#5F6984] from-[#0f1f47] p-2">
+          {/* SEARCH */}
+          <div className="text-left text-lg py-3 m-auto flex justify-center">
+            <input className="rounded text-lg mr-3 p-2 w-[450px]" type="text"
+              placeholder="State, City or Town" />
+            <button className="bg-red-600 text-white px-9 py-2 rounded">
+              Let's go
+            </button>
           </div>
+          {/* SEARCH */}
         </div>
-        {/* HEADER */}
-        <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
-          <div className="bg-white w-[100%] rounded p-3 shadow">
-            {/* RESTAURANT NAV */}
-            <nav className="flex text-reg border-b pb-2 font-bold">
-              <a href="" className="mr-7">Overview</a>
-              <a href="" className="mr-7">Menu</a>
-            </nav>
-            {/* RESTAURANT NAV */}
-            {/* MENU */}
-            <main className="bg-white mt-5">
-              <div>
-                <div className="mt-4 pb-1 mb-1">
-                  <h1 className="text-4xl font-bold">Menu</h1>
+        <div className="flex py-4 m-auto w-2/3 justify-between items-start">
+          <div className="w-1/5">
+            <div className="border-b p-4">
+              <h1 className="mb-2">Region</h1>
+              <p className="font-light text-reg">Kampala</p>
+              <p className="font-light text-reg">Jinja</p>
+              <p className="font-light text-reg">Mukono</p>
+              <p className="font-light text-reg">Mbale</p>
+            </div>
+            <div className="border-b p-4 mt-3">
+              <h1 className="mb-2">Cuisine</h1>
+              <p className="font-light text-reg">Mexican</p>
+              <p className="font-light text-reg">Italian</p>
+              <p className="font-light text-reg">Chinese</p>
+              <p className="font-light text-reg">Korean</p>
+            </div>
+            <div className="mt-3 pb-4">
+              <h1 className="mb-2">Price</h1>
+              <div className="flex">
+                <button className="border w-full text-reg font-light rounded-l p-2">$</button>
+                <button className="border-r border-t border-b w-full text-reg font-light p-2">$$</button>
+                <button className="border-r border-t border-b w-full text-reg font-light rounded-r p-2">$$$</button>
+              </div>
+            </div>
+          </div>
+          {/* SEARCH SIDE BAR */}
+          <div className="w-5/6">
+            {/* RESTAURANT CARD */}
+            <div className="border-b flex pb-5">
+              <img src="" alt="" className="w-44 rounded" />
+              <div className="pl-5">
+                <h2 className="text-3xl">Aian Restaurant Collective</h2>
+                <div className="flex items-start">
+                  <div className="flex mb-2">******</div>
+                  <p className="ml-2 text-sm">Awesome</p>
                 </div>
-                <div className="flex flex-wrap justify-between">
-                  {/* MENU CARD */}
-                  <div className="border rounded p-3 w-[49%] mb-3">
-                    <h3 className="font-bold text-lg">Surf and Turf</h3>
-                    <p className="font-light mt-1 text-sm">Grilled 8oz New York Striploin and 6oz Lobster Tail</p>
-                    <p className="mt-7">$79.00</p>
+                <div className="mb-9">
+                  <div className="font-light flex text-reg">
+                    <p className="mr-4">$$$</p>
+                    <p className="mr-4">Mexican</p>
+                    <p className="mr-4">Kampala</p>
                   </div>
-                  {/* MENU CARD */}
+                </div>
+                <div className="text-red-600">
+                  <a href="">View more information</a>
                 </div>
               </div>
-            </main>
-            {/* MENU */}
+            </div>
+            {/* RESTAURANT CARD */}
           </div>
+          {/* SEARCH SIDE BAR */}
         </div>
+        {/* HEADER */}
       </main>
     </main>
   );
