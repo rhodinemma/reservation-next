@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  const [location, setLocation] = useState("");
   return (
     <main className="bg-gray-100 min-h-screen w-90">
       <main className="max-w-screen-2xl m-auto bg-white">
@@ -29,8 +35,8 @@ export default function Home() {
               {/* SEARCH */}
               <div className="text-left text-lg py-3 m-auto flex justify-center">
                 <input className="rounded text-lg mr-3 p-2 w-[450px]" type="text"
-                  placeholder="State, City or Town" />
-                <button className="bg-red-600 text-white px-9 py-2 rounded">
+                  placeholder="State, City or Town" value={location} onChange={(e) => setLocation(e.target.value)} />
+                <button className="bg-red-600 text-white px-9 py-2 rounded" onClick={() => { if (location === "banana") return; router.push("/search") }}>
                   Let's go
                 </button>
               </div>
