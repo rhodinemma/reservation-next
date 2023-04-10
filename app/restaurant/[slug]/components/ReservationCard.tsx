@@ -1,3 +1,5 @@
+"use client";
+
 export default function ReservationCard() {
     return (
         <div className="fixed w-[17%] bg-white rounded p-3 shadow">
