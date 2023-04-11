@@ -1,4 +1,3 @@
-import NavBar from "../../components/NavBar";
 import Description from "./components/Description";
 import Header from "./components/Header";
 import Rating from "./components/Rating";
@@ -10,28 +9,25 @@ import Images from "./components/images";
 
 export default function RestaurantDetails() {
     return (
-        <main className="bg-gray-100 min-h-screen w-90">
-            <main className="max-w-screen-2xl m-auto bg-white">
-                <NavBar />
-                <Header />
-                {/* DESCRIPTION PORTION */}
-                <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
-                    <div className="bg-white w-[70%] rounded p-3 shadow">
-                        <RestaurantNavBar />
-                        <Title />
-                        <Rating />
-                        <Description />
-                        <Images />
-                        <Reviews />
-                    </div>
-                    {/* RESERVATION CARD PORTION */}
-                    <div className="w-[28%] relative text-reg">
-                        <ReservationCard />
-                    </div>
-                    {/* RESERVATION CARD PORTION */}
+        <>
+            <Header />
+            {/* DESCRIPTION PORTION */}
+            <div className="flex m-auto w-2/3 justify-between items-start 0 -mt-11">
+                <div className="bg-white w-[70%] rounded p-3 shadow">
+                    <RestaurantNavBar />
+                    <Title />
+                    <Rating />
+                    <Description />
+                    <Images />
+                    <Reviews />
                 </div>
-                {/* DESCRIPTION PORTION */}
-            </main>
-        </main>
+                {/* RESERVATION CARD PORTION */}
+                <div className="w-[28%] relative text-reg">
+                    <ReservationCard />
+                </div>
+                {/* RESERVATION CARD PORTION */}
+            </div>
+            {/* DESCRIPTION PORTION */}
+        </>
     );
 }
