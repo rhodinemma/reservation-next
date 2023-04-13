@@ -10,7 +10,7 @@ export default function SearchBar() {
         <div className="text-left text-lg py-3 m-auto flex justify-center">
             <input className="rounded text-lg mr-3 p-2 w-[450px]" type="text"
                 placeholder="State, City or Town" value={location} onChange={(e) => setLocation(e.target.value)} />
-            <button className="bg-red-600 text-white px-9 py-2 rounded" onClick={() => { if (location === "banana") return; router.push("/search") }}>
+            <button className="bg-red-600 text-white px-9 py-2 rounded" onClick={() => { if (location === "") return; router.push(`/search?city=${location}`); setLocation("") }}>
                 Let's go
             </button>
         </div>
